@@ -1,0 +1,21 @@
+{
+  "svelte.enable-ts-plugin": true,
+  "eslint.packageManager": "pnpm",
+  "eslint.probe": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue",
+    "markdown",
+    "svelte"
+  ],
+  "eslint.validate": [
+    "svelte"
+  ],
+  "prettier.documentSelectors": [
+    "**/*.svelte"
+  ],
+  "svelte.plugin.svelte.defaultScriptLanguage": "ts"
+}

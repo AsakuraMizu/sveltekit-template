@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "svelte.svelte-vscode",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "antfu.iconify",
+    "antfu.unocss",
+    "zixuanchen.vitest-explorer"
+  ]
+}

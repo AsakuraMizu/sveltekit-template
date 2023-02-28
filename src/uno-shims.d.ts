@@ -136,9 +136,12 @@ declare namespace svelteHTML {
     | SpecialSingleWord
     | TwoStringsComposition
     | SeparateEnabled;
-  type AttributifyNames<Prefix extends string = ''> = `${Prefix}${BasicAttributes}`;
+  type AttributifyNames<Prefix extends string> = `${Prefix}${BasicAttributes}`;
   // | `${Prefix}${PseudoPrefix}:${BasicAttributes}`;
-  type AttributifyAttributes = Partial<Record<AttributifyNames, string | boolean>>;
+  type AttributifyAttributes<Prefix extends string = ''> = Partial<
+    Record<AttributifyNames<Prefix>, string | boolean>
+  >;
+
   // eslint-disable-next-line
   interface HTMLAttributes<T> extends AttributifyAttributes {}
 }

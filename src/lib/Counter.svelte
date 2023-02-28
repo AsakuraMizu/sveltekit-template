@@ -20,6 +20,6 @@
   transition="~ duration-250"
   cursor="pointer"
 >
-  <div class="i-carbon:cursor-2" />
+  <span class="i-carbon:cursor-2" />
   Clicks: {count}
 </button>

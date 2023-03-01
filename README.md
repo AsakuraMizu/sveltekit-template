@@ -4,8 +4,8 @@ Based on [Asakura Mizu's Svelte Template](https://github.com/AsakuraMizu/svelte-
 
 ## Features
 
-+ SvelteKit (of course)
-+ TypeScript
-+ UnoCSS
-+ Vitest
-+ Eslint & Prettier
+- SvelteKit (of course)
+- TypeScript
+- UnoCSS
+- Vitest
+- Eslint & Prettier

@@ -11,11 +11,7 @@
     "markdown",
     "svelte"
   ],
-  "eslint.validate": [
-    "svelte"
-  ],
-  "prettier.documentSelectors": [
-    "**/*.svelte"
-  ],
+  "eslint.validate": ["svelte"],
+  "prettier.documentSelectors": ["**/*.svelte"],
   "svelte.plugin.svelte.defaultScriptLanguage": "ts"
 }

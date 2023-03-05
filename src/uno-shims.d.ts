@@ -1,147 +1,86 @@
 declare namespace svelteHTML {
-  type TwoStringsCompositionPrefix = 'm' | 'p';
-  type TwoStringsCompositionSuffix = 'r' | 'b' | 'l' | 't' | 'x' | 'y' | 'a';
-  /** Some words can compose with two strings to become a complete unocss rule such as ha, mr, mb */
-  type TwoStringsComposition = `${TwoStringsCompositionPrefix}${TwoStringsCompositionSuffix}`;
-  /** Some words can be a complete unocss rule by itself */
-  type SpecialSingleWord =
-    | 'container'
-    | 'flex'
-    | 'block'
-    | 'inline'
-    | 'inline-block'
-    | 'table'
-    | 'isolate'
-    | 'absolute'
-    | 'relative'
-    | 'fixed'
-    | 'sticky'
-    | 'static'
-    | 'visible'
-    | 'invisible'
-    | 'grow'
-    | 'shrink'
-    | 'antialiased'
-    | 'italic'
-    | 'ordinal'
-    | 'overline'
-    | 'underline'
-    | 'uppercase'
-    | 'lowercase'
-    | 'capitalize'
-    | 'truncate'
-    | 'border'
-    | 'rounded'
-    | 'outline'
-    | 'ring'
-    | 'shadow'
-    | 'blur'
-    | 'grayscale'
-    | 'invert'
-    | 'sepia'
-    | 'transition'
-    | 'resize'
-    | 'transform'
-    | 'filter'
-    | 'ha'
-    | 'wa';
-  type HWNumberCompositionPrefix = 'max-h' | 'max-w' | 'min-h' | 'min-w' | 'w' | 'h';
-  type StringNumberCompositionPrefix =
-    | 'op'
-    | 'opacity'
-    | 'fw'
+  type UtilityNames =
     | 'p'
     | 'm'
-    | 'z'
-    | HWNumberCompositionPrefix
-    | TwoStringsComposition;
-  /** Some words can be a complete unocss rule by compose a string and a number, such as op80, fw300, p2, p10px */
-  type StringNumberComposition =
-    | `${StringNumberCompositionPrefix}${number}${'px' | 'rem' | 'em' | ''}`
-    | `${StringNumberCompositionPrefix}${'a' | 'auto' | 'full'}`
-    | `${HWNumberCompositionPrefix}screen`;
-  type PseudoPrefix =
-    | 'active'
-    | 'before'
-    | 'after'
-    | 'dark'
-    | 'light'
-    | 'first'
-    | 'last'
-    | 'focus'
-    | 'hover'
-    | 'link'
-    | 'root'
-    | 'sm'
-    | 'md'
-    | 'lg'
-    | 'xl'
-    | '2xl'
-    | 'enabled'
-    | 'disabled'
-    | 'all'
-    | 'children';
-  /** Some words can be used to separate utilities, such as font="mono light", text="sm white" */
-  type SeparateEnabled =
-    | 'align'
-    | 'animate'
-    | 'backdrop'
-    | 'bg'
-    | 'blend'
-    | 'border'
-    | 'box'
-    | 'container'
-    | 'content'
-    | 'cursor'
-    | 'display'
-    | 'divide'
-    | 'filter'
-    | 'flex'
-    | 'font'
-    | 'gap'
-    | 'gradient'
-    | 'grid'
-    | 'h'
-    | 'icon'
-    | 'items'
-    | 'justify'
-    | 'list'
-    | 'm'
-    | 'max-h'
+    | 'w'
+    | 'min-w'
     | 'max-w'
     | 'min-h'
-    | 'min-w'
-    | 'object'
+    | 'max-h'
+    | 'h'
+    | 'z'
+    | 'border'
+    | 'grid'
+    | 'flex'
+    | 'bg'
+    | 'text'
+    | 'font'
     | 'opacity'
-    | 'order'
-    | 'outline'
-    | 'overflow'
-    | 'p'
-    | 'place'
+    | 'animate'
+    | 'transition'
+    | 'transform'
+    | 'align'
+    | 'justify'
+    | 'items'
+    | 'block'
+    | 'content'
     | 'pos'
+    | 'box'
+    | 'caret'
+    | 'isolation'
+    | 'object'
+    | 'overflow'
+    | 'overscroll'
+    | 'resize'
+    | 'underline'
+    | 'list'
+    | 'gradient'
+    | 'divide'
+    | 'gap'
     | 'ring'
-    | 'select'
-    | 'shadow'
+    | 'icon'
+    | 'container'
     | 'space'
     | 'table'
-    | 'text'
-    | 'transform'
-    | 'transition'
-    | 'underline'
-    | 'w'
-    | 'z'
-    | PseudoPrefix;
-  type BasicAttributes =
-    | StringNumberComposition
-    | SpecialSingleWord
-    | TwoStringsComposition
-    | SeparateEnabled;
-  type AttributifyNames<Prefix extends string> = `${Prefix}${BasicAttributes}`;
-  // | `${Prefix}${PseudoPrefix}:${BasicAttributes}`;
-  type AttributifyAttributes<Prefix extends string = ''> = Partial<
-    Record<AttributifyNames<Prefix>, string | boolean>
-  >;
+    | 'order'
+    | 'place'
+    | 'display'
+    | 'shadow'
+    | 'blend'
+    | 'filter'
+    | 'backdrop'
+    | 'cursor'
+    | 'outline'
+    | 'select'
+    | 'appearance'
+    | 'pointer-events';
 
-  // eslint-disable-next-line
+  type VariantNames =
+    | 'hover'
+    | 'active'
+    | 'focus'
+    | 'enabled'
+    | 'dark'
+    | 'light'
+    | 'sm'
+    | 'lg'
+    | 'md'
+    | 'xl'
+    | 'xxl'
+    | 'first'
+    | 'last'
+    | 'child'
+    | 'root'
+    | 'before'
+    | 'after'
+    | 'all';
+
+  type AttributifyNames<Prefix extends string = ''> =
+    | `${Prefix}${UtilityNames}`
+    | `${Prefix}${VariantNames}`;
+  // | `${Prefix}${VariantNames}:${UtilityNames}`;
+
+  interface AttributifyAttributes extends Partial<Record<AttributifyNames, string>> {}
+
   interface HTMLAttributes<T> extends AttributifyAttributes {}
 }

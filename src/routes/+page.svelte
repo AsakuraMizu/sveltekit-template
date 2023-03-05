@@ -10,7 +10,7 @@
   <meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<div p8 text="center">
+<div p="8" text="center">
   <div>
     <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
       <img src={viteLogo} class="logo" alt="Vite Logo" />

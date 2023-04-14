@@ -80,7 +80,7 @@ declare namespace svelteHTML {
     | `${Prefix}${VariantNames}`;
   // | `${Prefix}${VariantNames}:${UtilityNames}`;
 
-  interface AttributifyAttributes extends Partial<Record<AttributifyNames, string>> {}
+  type AttributifyAttributes = Partial<Record<AttributifyNames, string>>;
 
-  interface HTMLAttributes<T> extends AttributifyAttributes {}
+  type HTMLAttributes = AttributifyAttributes;
 }

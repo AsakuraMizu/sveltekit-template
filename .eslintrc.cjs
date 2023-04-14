@@ -16,6 +16,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:svelte/recommended',
     'plugin:prettier/recommended',
+    '@unocss/eslint-config',
   ],
   plugins: ['@typescript-eslint'],
   ignorePatterns: ['*.cjs'],

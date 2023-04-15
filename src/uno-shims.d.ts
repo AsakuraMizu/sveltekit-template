@@ -15,13 +15,14 @@ declare namespace svelteHTML {
     | 'bg'
     | 'text'
     | 'font'
-    | 'opacity'
+    | 'op'
     | 'animate'
     | 'transition'
     | 'transform'
     | 'align'
     | 'justify'
     | 'items'
+    | 'self'
     | 'block'
     | 'content'
     | 'pos'
@@ -69,11 +70,13 @@ declare namespace svelteHTML {
     | 'xxl'
     | 'first'
     | 'last'
-    | 'child'
+    | 'children'
     | 'root'
     | 'before'
     | 'after'
-    | 'all';
+    | 'all'
+    | 'odd'
+    | 'even';
 
   type AttributifyNames<Prefix extends string = ''> =
     | `${Prefix}${UtilityNames}`

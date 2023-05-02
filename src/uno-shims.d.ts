@@ -49,6 +49,7 @@ declare namespace svelteHTML {
     | 'shadow'
     | 'blend'
     | 'filter'
+    | 'aspect'
     | 'backdrop'
     | 'cursor'
     | 'outline'

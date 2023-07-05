@@ -1,6 +1,5 @@
 {
   "svelte.enable-ts-plugin": true,
-  "eslint.packageManager": "pnpm",
   "eslint.probe": [
     "javascript",
     "javascriptreact",

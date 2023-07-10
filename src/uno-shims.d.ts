@@ -10,6 +10,7 @@ declare namespace svelteHTML {
     | 'h'
     | 'z'
     | 'border'
+    | 'inset'
     | 'grid'
     | 'flex'
     | 'bg'

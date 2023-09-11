@@ -1,3 +1,6 @@
+/**
+ * @type {import('eslint').Linter.Config}
+ */
 module.exports = {
   root: true,
   env: {
@@ -27,6 +30,11 @@ module.exports = {
       parserOptions: {
         parser: '@typescript-eslint/parser',
       },
+    },
+    {
+      files: ['tests/**'],
+      plugins: ['vitest'],
+      extends: ['plugin:vitest/recommended'],
     },
   ],
   rules: {

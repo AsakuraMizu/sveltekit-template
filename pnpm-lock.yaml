@@ -68,6 +68,9 @@ devDependencies:
   eslint-plugin-svelte:
     specifier: ^2.33.1
     version: 2.33.1(eslint@8.49.0)(svelte@4.2.0)
+  eslint-plugin-vitest:
+    specifier: ^0.3.1
+    version: 0.3.1(@typescript-eslint/eslint-plugin@6.6.0)(eslint@8.49.0)(vitest@0.34.4)
   jsdom:
     specifier: ^22.1.0
     version: 22.1.0
@@ -1583,6 +1586,26 @@ packages:
     transitivePeerDependencies:
       - supports-color
       - ts-node
+    dev: true
+
+  /eslint-plugin-vitest@0.3.1(@typescript-eslint/eslint-plugin@6.6.0)(eslint@8.49.0)(vitest@0.34.4):
+    resolution: {integrity: sha512-GeR3zISHmqUGWK2sfW+eyCZivMqiQYzPf9UttHXBiEyMveS/jkKLHCrHUllwr3Hz1+i0zoseANd2xL0cFha8Eg==}
+    engines: {node: 14.x || >= 16}
+    peerDependencies:
+      '@typescript-eslint/eslint-plugin': '*'
+      eslint: '>=8.0.0'
+      vitest: '*'
+    peerDependenciesMeta:
+      '@typescript-eslint/eslint-plugin':
+        optional: true
+    dependencies:
+      '@typescript-eslint/eslint-plugin': 6.6.0(@typescript-eslint/parser@6.6.0)(eslint@8.49.0)(typescript@5.2.2)
+      '@typescript-eslint/utils': 6.6.0(eslint@8.49.0)(typescript@5.2.2)
+      eslint: 8.49.0
+      typescript: 5.2.2
+      vitest: 0.34.4(jsdom@22.1.0)
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /eslint-scope@7.2.2:

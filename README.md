@@ -6,6 +6,6 @@ Based on [Asakura Mizu's Svelte Template](https://github.com/AsakuraMizu/svelte-
 
 - SvelteKit (of course)
 - TypeScript
-- UnoCSS
-- Vitest
+- TailwindCSS
+- ~~Vitest~~
 - Eslint & Prettier

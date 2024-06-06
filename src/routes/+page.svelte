@@ -10,7 +10,7 @@
   <meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<div p="8" text="center">
+<div class="p-8 text-center">
   <div>
     <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
       <img src={viteLogo} class="logo" alt="Vite Logo" />
@@ -22,9 +22,9 @@
       <img src={unoLogo} class="logo uno" alt="UnoCSS Logo" />
     </a>
   </div>
-  <h1 text="5xl" font="bold">Vite + SvelteKit + UnoCSS</h1>
+  <h1 class="text-5xl font-bold">Vite + SvelteKit + UnoCSS</h1>
 
-  <div p="8">
+  <div class="p-8">
     <Counter />
   </div>
 </div>

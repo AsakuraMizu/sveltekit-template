@@ -1,12 +1,11 @@
-/// <reference types="vitest" />
 import { sveltekit } from '@sveltejs/kit/vite';
-import unocss from '@unocss/vite';
-import { defineConfig } from 'vite';
+import tailwindcss from '@tailwindcss/vite';
+import icons from 'unplugin-icons/vite';
+import { defineConfig } from 'vitest/config';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [unocss(), sveltekit()],
+  plugins: [tailwindcss(), sveltekit(), icons({ compiler: 'svelte' })],
   test: {
-    environment: 'jsdom',
+    include: ['src/**/*.{test,spec}.{js,ts}'],
   },
 });

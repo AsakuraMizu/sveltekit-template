@@ -1,24 +1,13 @@
 <script lang="ts">
-  let count = 0;
+  import IconCarbonCursor2 from '~icons/carbon/cursor-2';
 
-  const increment = () => {
-    count += 1;
-  };
+  let count = $state(0);
 </script>
 
 <button
-  on:click={increment}
-  p="x5 y3"
-  flex="inline"
-  items="center"
-  border="~ solid transparent rounded-lg hover:#646cff"
-  outline="focus:4 focus-visible:4"
-  bg="#f9f9f9 dark:#1a1a1a"
-  text="base"
-  font="medium"
-  transition="~ duration-250"
-  cursor="pointer"
+  onclick={() => count++}
+  class="px-5 py-3 inline-flex items-center border border-solid rounded-lg border-transparent hover:border-[#646cff] focus:outline-4 focus-visible:outline-4 bg-[#f9f9f9] dark:bg-[#1a1a1a] text-base font-medium transition duration-250 cursor-pointer"
 >
-  <span class="i-carbon:cursor-2" />
+  <IconCarbonCursor2 />
   Clicks: {count}
 </button>
